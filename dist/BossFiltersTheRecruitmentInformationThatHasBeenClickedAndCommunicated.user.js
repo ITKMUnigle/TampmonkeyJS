@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Boss招聘过滤点击过沟通的招聘信息
-// @version      1.0
+// @version      1.2
 // @description  Boss招聘过滤点击过沟通的招聘信息
 // @author       Unigle
 // @namespace    https://github.com/ITKMUnigle/TampmonkeyJS
@@ -10,7 +10,7 @@
 // @inculde https://www.zhipin.com/web/geek/job\?((?:&|[\w]+=[\w%]+))+
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=zhipin.com
 // @grant        none
-// @run-at       document-end
+// @run-at       document-start
 // @connect         raw.githubusercontent.com
 // @connect         github.com
 // @connect         cn.bing.com
@@ -20,8 +20,8 @@
 // @connect         localhost
 // @connect         *
 
+// @note v1.2 - 修改内容
 // @note v1.0 发布脚本
-
 // ==/UserScript==
 
 (function () {

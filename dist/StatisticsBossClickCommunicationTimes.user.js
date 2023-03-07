@@ -1,15 +1,15 @@
 // ==UserScript==
 // @name         统计Boss点击沟通次数
+// @version      1.2
+// @description  统计Boss点击沟通次数
+// @author       Unigle
 // @namespace    https://github.com/ITKMUnigle/TampmonkeyJS
 // @homepage     https://github.com/ITKMUnigle/TampmonkeyJS
 // @updateURL    https://raw.githubusercontent.com/ITKMUnigle/TampmonkeyJS/main/dist/StatisticsBossClickCommunicationTimes.user.js
-// @version      1.1
-// @description  统计Boss点击沟通次数
-// @author       Unigle
 // @match        https://www.zhipin.com/web/geek/chat*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=zhipin.com
 // @grant        none
-// @run-at       document-end
+// @run-at       document-start
 // @connect         raw.githubusercontent.com
 // @connect         github.com
 // @connect         cn.bing.com
@@ -19,8 +19,8 @@
 // @connect         localhost
 // @connect         *
 
+// @note v1.2 - 修改内容
 // @note v1.1 - 修复bug
-
 // ==/UserScript==
 
 (function() {
