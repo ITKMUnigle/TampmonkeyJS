@@ -3,7 +3,7 @@
 // @namespace    https://github.com/ITKMUnigle/TampmonkeyJS
 // @homepage     https://github.com/ITKMUnigle/TampmonkeyJS
 // @updateURL    https://raw.githubusercontent.com/ITKMUnigle/TampmonkeyJS/main/dist/StatisticsBossClickCommunicationTimes.user.js
-// @version      1.0
+// @version      1.1
 // @description  统计Boss点击沟通次数
 // @author       Unigle
 // @match        https://www.zhipin.com/web/geek/chat*
