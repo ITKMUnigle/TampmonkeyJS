@@ -44,9 +44,8 @@
         // 过滤逻辑
         nodeList.forEach(_ => {
             if (parseInt(_.time.split(":")[0]) >= 0 && parseInt(_.time.split(":")[0]) < 24) {
-                if (_.lastMsg != '尊贵的VIP用户，您的消息已被心仪Boss优先查看') {
-                    count++
-                }else{
+                count++
+                if (_.lastMsg == '尊贵的VIP用户，您的消息已被心仪Boss优先查看') {
                     autoBossTipsCount++
                 }
             }
@@ -58,13 +57,17 @@
         }
         let child = document.createElement("span")
         child.id = "boss_chat_count"
-        child.textContent = `今天总共点击沟通：${count} 次\nBoss设置的提醒功能次数: ${autoBossTipsCount}`
+        if (autoBossTipsCount == 0) {
+            child.textContent = `今天总共沟通：${count} 次`
+        } else {
+            child.textContent = `今天总共沟通：${count} 次\nBoss提醒功能消息次数: ${autoBossTipsCount}`
+        }
         child.style.position = "absolute"
         child.style.top = "200px"
         child.style.right = "50px"
         child.style.color = "red"
         child.style.fontSize = "22px"
-        child.style.whiteSpace="pre-wrap"
+        child.style.whiteSpace = "pre-wrap"
         container.appendChild(child)
     }
     //设置定时器2s执行
