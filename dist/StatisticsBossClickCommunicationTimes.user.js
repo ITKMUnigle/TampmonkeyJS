@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         统计Boss点击沟通次数
-// @version      1.3.1
+// @version      1.3.2
 // @description  统计Boss点击沟通次数
 // @author       Unigle
 // @namespace    https://github.com/ITKMUnigle/TampmonkeyJS
@@ -19,6 +19,7 @@
 // @connect         localhost
 // @connect         *
 
+// @note v1.3.2 - 修改提醒消息过滤
 // @note v1.3.1 - 修改提醒消息过滤
 // @note v1.3 - 新增BOSS提醒消息过滤
 // @note v1.2 - 修改内容
