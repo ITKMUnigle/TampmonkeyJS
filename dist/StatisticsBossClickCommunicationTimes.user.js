@@ -10,6 +10,17 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=zhipin.com
 // @grant        none
 // @run-at       document-end
+// @connect         raw.githubusercontent.com
+// @connect         github.com
+// @connect         cn.bing.com
+// @connect         www.bing.com
+// @connect         translate.google.cn
+// @connect         translate.google.com
+// @connect         localhost
+// @connect         *
+
+// @note v1.1 - 修复bug
+
 // ==/UserScript==
 
 (function() {
