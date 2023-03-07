@@ -2,7 +2,7 @@
 // @name         统计Boss点击沟通次数
 // @namespace    https://github.com/ITKMUnigle/TampmonkeyJS
 // @homepage     https://github.com/ITKMUnigle/TampmonkeyJS
-// @updateURL    https://raw.githubusercontent.com/ITKMUnigle/TampmonkeyJS/main/dist/StatisticsBossClickCommunicationTimes.js
+// @updateURL    https://raw.githubusercontent.com/ITKMUnigle/TampmonkeyJS/main/dist/StatisticsBossClickCommunicationTimes.user.js
 // @version      1.0
 // @description  统计Boss点击沟通次数
 // @author       Unigle
@@ -10,14 +10,6 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=zhipin.com
 // @grant        none
 // @run-at       document-end
-// @connect         raw.githubusercontent.com
-// @connect         github.com
-// @connect         cn.bing.com
-// @connect         www.bing.com
-// @connect         translate.google.cn
-// @connect         translate.google.com
-// @connect         localhost
-// @connect         *
 // ==/UserScript==
 
 (function() {
