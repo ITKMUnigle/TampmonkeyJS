@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         统计Boss点击沟通次数
-// @version      1.2
+// @version      1.3
 // @description  统计Boss点击沟通次数
 // @author       Unigle
 // @namespace    https://github.com/ITKMUnigle/TampmonkeyJS
@@ -19,39 +19,52 @@
 // @connect         localhost
 // @connect         *
 
+// @note v1.3 - 新增BOSS提醒消息过滤
 // @note v1.2 - 修改内容
 // @note v1.1 - 修复bug
 // ==/UserScript==
 
-(function() {
+(function () {
     'use strict';
     function jisuan() {
         //获取聊天列表
-        var chatlist = document.querySelectorAll(".user-list > ul li .text .time")
-        //统计次数
+        let chatBoxList = document.querySelectorAll(".user-list > ul li .text")
+        let nodeList = []
         let count = 0
-        chatlist.forEach(_ => {
-            if (_.textContent.indexOf(":") > 0) {
-                let time = parseInt(_.textContent.split(":")[0])
-                if ( time >= 0 && time <24) {
-                    count ++
+        chatBoxList.forEach(_ => {
+            if (_.childNodes[0].textContent.indexOf(":") > 0) {
+                nodeList.push({
+                    time: _.childNodes[0].textContent,
+                    lastMsg: _.childNodes[2].textContent
+                })
+            }
+        })
+        // 过滤逻辑
+        nodeList.forEach(_ => {
+            if (parseInt(_.time.split(":")[0]) >= 0 && parseInt(_.time.split(":")[0]) < 24) {
+                if (_.lastMsg != '尊贵的VIP用户，您的消息已被心仪Boss优先查看') {
+                    count++
                 }
             }
         })
-        //创建span元素插入到container中
         let container = document.querySelector(".main-wrap");
+        let msgBox = document.querySelector("#boss_chat_count")
+        if (msgBox) {
+            msgBox.remove()
+        }
         let child = document.createElement("span")
+        child.id = "boss_chat_count"
         child.textContent = `今天总共点击沟通：${count} 次`
-        child.style.position="absolute"
-        child.style.top="200px"
-        child.style.right="50px"
-        child.style.color="red"
-        child.style.fontSize="24px"
+        child.style.position = "absolute"
+        child.style.top = "200px"
+        child.style.right = "50px"
+        child.style.color = "red"
+        child.style.fontSize = "24px"
         container.appendChild(child)
     }
     //设置定时器2s执行
-    let timer = setTimeout(()=>{
+    let timer = setTimeout(() => {
         clearTimeout(timer)
         jisuan()
-    },2000)
+    }, 2000)
 })();
