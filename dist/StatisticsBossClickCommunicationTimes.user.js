@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         统计Boss点击沟通次数
-// @version      1.3.2
+// @version      1.3.3
 // @description  统计Boss点击沟通次数
 // @author       Unigle
 // @namespace    https://github.com/ITKMUnigle/TampmonkeyJS
