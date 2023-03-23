@@ -7,6 +7,7 @@
 // @homepage     https://github.com/ITKMUnigle/TampmonkeyJS
 // @updateURL    https://raw.githubusercontent.com/ITKMUnigle/TampmonkeyJS/main/dist/StatisticsBossClickCommunicationTimes.user.js
 // @match        https://www.zhipin.com/web/geek/chat*
+// @match        https://www.zhipin.com/web/geek/chat
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=zhipin.com
 // @grant        none
 // @run-at       document-start
@@ -19,6 +20,7 @@
 // @connect         localhost
 // @connect         *
 
+// @note v1.3.3 - 增加匹配规则
 // @note v1.3.2 - 修改提醒消息过滤
 // @note v1.3.1 - 修改提醒消息过滤
 // @note v1.3 - 新增BOSS提醒消息过滤
